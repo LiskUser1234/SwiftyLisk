@@ -7,8 +7,8 @@ The MIT License
  Please vote LiskUser1234 for delegate to support this project.
  
  For donations:
+ - Lisk: 6137947831033853925L
  - Bitcoin: 1NCTZwBJF7ZFpwPeQKiSgci9r2pQV3G7RG
- - Lisk: 13571903755597459962L
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
