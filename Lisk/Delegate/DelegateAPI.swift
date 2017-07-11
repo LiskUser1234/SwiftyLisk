@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -39,16 +39,18 @@ class DelegateAPI {
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase whose derived address will become a delegate
+    ///   - publicKey: Optional: The expected public key for the account derived from the given `passphrase`
     ///   - secondPassphrase: Optional: the second passphrase of the address that will become a delegate. Necessary to sign the delegate registration transaction
     ///   - username: The username that will be associated with the addresss to turn into a delegate
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#enable-delegate-on-account
-    open class func enableDelegate(passphrase: String,
-                               secondPassphrase: String?,
-                               username: String,
-                               callback: @escaping Callback) {
+    open class func becomeDelegate(passphrase: String,
+                                   publicKey: String?,
+                                   secondPassphrase: String?,
+                                   username: String,
+                                   callback: @escaping Callback) {
         var data = [
             "secret": passphrase,
             "username": username
@@ -56,6 +58,10 @@ class DelegateAPI {
         
         if let secondPassphrase = secondPassphrase {
             data["secondSecretKey"] = secondPassphrase
+        }
+        
+        if let publicKey = publicKey {
+            data["publicKey"] = publicKey
         }
         
         Api.request(module: moduleName,
@@ -73,8 +79,8 @@ class DelegateAPI {
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-delegates-list
-    open class func getDelegates(query: [String : String],
-                             callback: @escaping Callback) {
+    open class func getAllDelegates(query: [String : String],
+                                    callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: nil,
                     method: .get,
@@ -91,7 +97,7 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-delegate
     open class func getDelegate(username: String,
-                            callback: @escaping Callback) {
+                                callback: @escaping Callback) {
         let data = [
             "username": username
         ]
@@ -112,7 +118,7 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-delegate
     open class func getDelegate(publicKey: String,
-                            callback: @escaping Callback) {
+                                callback: @escaping Callback) {
         let data = [
             "publicKey": publicKey
         ]
@@ -128,21 +134,32 @@ class DelegateAPI {
     ///
     /// - Parameters:
     ///   - partialUsername: Part of the username of the delegate to retrieve
+    ///   - limit: Maximum amount of results to return. Between 1 and 1,000
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#search-for-delegates
     open class func search(partialUsername: String,
-                       callback: @escaping Callback) {
+                           limit: Int?,
+                           callback: @escaping Callback) {
+        var data = [
+            "q": partialUsername
+        ]
+        
+        if let limit = limit {
+            data["limit"] = String(limit)
+        }
+        
         Api.request(module: moduleName,
                     submodule: "search",
                     method: .get,
+                    query: data,
                     callback: callback)
     }
     
     /// Gets the total number of registered delegates.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-delegates-count
@@ -162,7 +179,7 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-votes-of-account
     open class func getVotes(address: String,
-                         callback: @escaping Callback) {
+                             callback: @escaping Callback) {
         let data = [
             "address": address
         ]
@@ -183,7 +200,7 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-voters
     open class func getVoters(publicKey: String,
-                          callback: @escaping Callback) {
+                              callback: @escaping Callback) {
         let data = [
             "publicKey": publicKey
         ]
@@ -199,13 +216,16 @@ class DelegateAPI {
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase of the delegate for which to enable forging
+    ///   - publicKey: Optional: The public key to match against the public key of the account derived from `passphrase`
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#enable-forging-on-delegate
     open class func enableForging(passphrase: String,
-                              callback: @escaping Callback) {
+                                  publicKey: String?,
+                                  callback: @escaping Callback) {
         toggleForging(passphrase: passphrase,
+                      publicKey: publicKey,
                       enable: true,
                       callback: callback)
     }
@@ -214,15 +234,31 @@ class DelegateAPI {
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase of the delegate for which to disable forging
+    ///   - publicKey: Optional: The public key to match against the public key of the account derived from `passphrase`
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#disable-forging-on-delegate
     open class func disableForging(passphrase: String,
-                               callback: @escaping Callback) {
+                                   publicKey: String?,
+                                   callback: @escaping Callback) {
         toggleForging(passphrase: passphrase,
+                      publicKey: publicKey,
                       enable: false,
                       callback: callback)
+    }
+    
+    /// Gets whether the current node is forging on behalf of the delegate with the given public key
+    ///
+    /// - Parameters:
+    ///   - publicKey: The public key of the delegate for which the server will tell whether it is in its list of forgers
+    ///   - callback: The function that will be called with information about the request
+    open class func isForging(publicKey: String,
+                              callback: @escaping Callback) {
+        Api.request(module: "forging",
+                    submodule: "status",
+                    method: .get,
+                    callback: callback)
     }
     
     /// Gets the amount of lisks forged by the given public key.
@@ -236,9 +272,9 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-forged-by-account
     open class func getForgedByAccount(publicKey: String,
-                                   start: Int64?,
-                                   end: Int64?,
-                                   callback: @escaping Callback) {
+                                       start: Int64?,
+                                       end: Int64?,
+                                       callback: @escaping Callback) {
         var data = [
             "generatorPublicKey": publicKey
         ]
@@ -267,7 +303,7 @@ class DelegateAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-next-forgers
     open class func getNextForgers(limit: Int?,
-                               callback: @escaping Callback) {
+                                   callback: @escaping Callback) {
         var data: [String : String] = [:]
         
         if let limit = limit {
@@ -281,19 +317,33 @@ class DelegateAPI {
                     callback: callback)
     }
     
+    /// Gets the fee to register as a delegate.
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func getFee(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "fee",
+                    method: .get,
+                    callback: callback)
+    }
     
     // Helper methods
     
     private static func toggleForging(passphrase: String,
+                                      publicKey: String?,
                                       enable: Bool,
                                       callback: @escaping Callback) {
-        let data = [
+        var data = [
             "secret": passphrase
         ]
         
+        if let publicKey = publicKey {
+            data["publicKey"] = publicKey
+        }
+        
         Api.request(module: moduleName,
                     submodule: (enable ? "forging/enable" : "forging/disable"),
-                    method: .get,
+                    method: .post,
                     json: data,
                     callback: callback)
     }

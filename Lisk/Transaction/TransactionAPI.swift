@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -44,7 +44,7 @@ class TransactionAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-list-of-transactions
     open class func getAll(query: [String : String],
-                       callback: @escaping Callback) {
+                           callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: nil,
                     method: .get,
@@ -54,7 +54,7 @@ class TransactionAPI {
     
     /// Gets all unconfirmed transactions.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-list-of-unconfirmed-transactions
@@ -67,13 +67,23 @@ class TransactionAPI {
     
     /// Gets all queued transactions.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-list-of-queued-transactions
     open class func getAllQueued(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "queued",
+                    method: .get,
+                    callback: callback)
+    }
+    
+    /// Gets all multisignature transactions.
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func getAllMultisig(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "multisignatures",
                     method: .get,
                     callback: callback)
     }
@@ -87,7 +97,7 @@ class TransactionAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-transaction
     open class func get(transactionId: String,
-                    callback: @escaping Callback) {
+                        callback: @escaping Callback) {
         let data = [
             "id": transactionId
         ]
@@ -108,7 +118,7 @@ class TransactionAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-unconfirmed-transaction
     open class func getUnconfirmed(transactionId: String,
-                               callback: @escaping Callback) {
+                                   callback: @escaping Callback) {
         let data = [
             "id": transactionId
         ]
@@ -129,7 +139,7 @@ class TransactionAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-specific-queued-transaction
     open class func getQueued(transactionId: String,
-                          callback: @escaping Callback) {
+                              callback: @escaping Callback) {
         let data = [
             "id": transactionId
         ]
@@ -141,10 +151,39 @@ class TransactionAPI {
                     callback: callback)
     }
     
-    /// Propagate a transaction on the Lisk network
+    /// Gets a multisignature transaction with the given id.
+    ///
+    /// - Parameters:
+    ///   - transactionId: The id of the transaction to retrive
+    ///   - callback: The function that will be called with information about the request
+    open class func getMultisig(transactionId: String,
+                                callback: @escaping Callback) {
+        let data = [
+            "id": transactionId
+        ]
+        
+        Api.request(module: moduleName,
+                    submodule: "multisignatures/get",
+                    method: .get,
+                    query: data,
+                    callback: callback)
+    }
+    
+    /// Gets information about all transactions on the whole blockchain.
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func count(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "count",
+                    method: .get,
+                    callback: callback)
+    }
+    
+    /// Propagate a transaction on the Lisk network (standard accounts only)
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase of the sending address
+    ///   - publicKey: The expected public key associated with the account derived from `passphrase`
     ///   - amount: The amount to send, where LSK 1 = 100_000_000 units
     ///   - recipientId: The address to which `amount` will be sent to
     ///   - secondPassphrase: Optional: the second passphrase of the sending address
@@ -153,15 +192,59 @@ class TransactionAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#send-transaction
     open class func send(passphrase: String,
-                     amount: Double,
-                     recipientId: String,
-                     secondPassphrase: String?,
-                     callback: @escaping Callback) {
+                         publicKey: String?,
+                         amount: Double,
+                         recipientId: String,
+                         secondPassphrase: String?,
+                         callback: @escaping Callback) {
         var data: [String : Any] = [
             "secret": passphrase,
             "recipientId": recipientId,
             "amount": amount
         ]
+        
+        if let publicKey = publicKey {
+            data["publicKey"] = publicKey
+        }
+        
+        if let secondPassphrase = secondPassphrase {
+            data["secondSecret"] = secondPassphrase
+        }
+        
+        Api.request(module: moduleName,
+                    submodule: nil,
+                    method: .put,
+                    json: data,
+                    callback: callback)
+    }
+    
+    /// Propagate a transaction on the Lisk network (multisig accounts only)
+    ///
+    /// - Parameters:
+    ///   - passphrase: The passphrase of the sending address
+    ///   - publicKey: The expected public key associated with the account derived from `passphrase`
+    ///   - amount: The amount to send, where LSK 1 = 100_000_000 units
+    ///   - recipientId: The address to which `amount` will be sent to
+    ///   - secondPassphrase: Optional: the second passphrase of the sending address
+    ///   - callback: The function that will be called with information about the request
+    ///
+    /// For more information about the response see
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#send-transaction
+    open class func multisigSend(passphrase: String,
+                                 publicKey: String?,
+                                 amount: Double,
+                                 recipientId: String,
+                                 secondPassphrase: String?,
+                                 callback: @escaping Callback) {
+        var data: [String : Any] = [
+            "secret": passphrase,
+            "recipientId": recipientId,
+            "amount": amount
+        ]
+        
+        if let publicKey = publicKey {
+            data["multisigAccountPublicKey"] = publicKey
+        }
         
         if let secondPassphrase = secondPassphrase {
             data["secondSecret"] = secondPassphrase

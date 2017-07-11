@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -38,29 +38,35 @@ class MultisignatureAPI {
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase to sign the account's transactions
+    ///   - publicKey: Optional: The expected public key of the account derived from `passphrase`
     ///   - secondPassphrase: Optional: the second passphrase to sign the account's transactions
-    ///   - lifetime: The interval of time within which the minimum amount of signatures per transaction must be recieved
     ///   - minimumSignatures: The minimum amount of signatures to approve a transaction
+    ///   - lifetime: The interval of time within which the minimum amount of signatures per transaction must be recieved
     ///   - keysgroup: Array of public keys that can sign any of the account's tranasactions. Each public key must have a "+" prefix.
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#create-multi-signature-account
     open class func create(passphrase: String,
-                       secondPassphrase: String?,
-                       lifetime: Int,
-                       minimumSignatures: Int,
-                       keysgroup: [String],
-                       callback: @escaping Callback) {
+                           publicKey: String?,
+                           secondPassphrase: String?,
+                           minimumSignatures: Int,
+                           lifetime: Int,
+                           keysgroup: [String],
+                           callback: @escaping Callback) {
         var data = [
             "secret": passphrase,
             "lifetime": String(lifetime),
             "min": String(minimumSignatures),
             "keysgroup": keysgroup
-        ] as [String : Any]
+            ] as [String : Any]
         
         if let secondPassphrase = secondPassphrase {
             data["secondSecret"] = secondPassphrase
+        }
+        
+        if let publicKey = publicKey {
+            data["publicKey"] = publicKey
         }
         
         Api.request(module: moduleName,
@@ -75,11 +81,8 @@ class MultisignatureAPI {
     /// - Parameters:
     ///   - publicKey: The public key of the multisig account for which data will be retrieved
     ///   - callback: The function that will be called with information about the request
-    ///
-    /// For more information about the response see
-    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#create-multi-signature-account
-    open class func get(publicKey: String,
-                    callback: @escaping Callback) {
+    open class func getAccounts(publicKey: String,
+                                callback: @escaping Callback) {
         let data = [
             "publicKey" : publicKey
         ]
@@ -96,23 +99,28 @@ class MultisignatureAPI {
     /// - Parameters:
     ///   - passphrase: The passphrase of the signer
     ///   - publicKey: Optional: the public key of the signer, to check whether the passphrase's public key matches the expected public key
+    ///   - secondPassphrase: Optional: the second passphrase of the signer
     ///   - transactionId: The id of the multisig transaction to sign
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#sign-transaction
     open class func sign(passphrase: String,
-                     publicKey: String?,
-                     transactionId: String,
-                     callback: @escaping Callback) {
+                         publicKey: String?,
+                         secondPassphrase: String?,
+                         transactionId: String,
+                         callback: @escaping Callback) {
         var data = [
             "secret": passphrase,
-            "transactionId": transactionId,
-            
+            "transactionId": transactionId
         ]
         
         if let publicKey = publicKey {
             data["publicKey"] = publicKey
+        }
+        
+        if let secondPassphrase = secondPassphrase {
+            data["secondPassphrase"] = secondPassphrase
         }
         
         Api.request(module: moduleName,
@@ -131,7 +139,7 @@ class MultisignatureAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-pending-multi-signature-transactions
     open class func getPendingTransasctions(publicKey: String,
-                                        callback: @escaping Callback) {
+                                            callback: @escaping Callback) {
         let data = [
             "publicKey": publicKey
         ]

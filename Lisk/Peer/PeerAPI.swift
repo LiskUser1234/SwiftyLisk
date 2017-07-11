@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -43,7 +43,7 @@ class Peer {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-peers-list
     open class func getPeersList(query: [String : String],
-                             callback: @escaping Callback) {
+                                 callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: nil,
                     method: .get,
@@ -61,8 +61,8 @@ class Peer {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-peer
     open class func getPeer(ip: String,
-                        port: Int16,
-                        callback: @escaping Callback) {
+                            port: Int16,
+                            callback: @escaping Callback) {
         let query = [
             "ip": ip,
             "port": String(port)
@@ -77,7 +77,7 @@ class Peer {
     
     /// Gets the version and build time of the peer the network is currently connected to (see `Api.host`)
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-peer-version-build-time
@@ -87,5 +87,15 @@ class Peer {
                     method: .get,
                     callback: callback)
     }
-
+    
+    /// Gets the number of connected peers.
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func getPeersCount(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "count",
+                    method: .get,
+                    callback: callback)
+    }
+    
 }

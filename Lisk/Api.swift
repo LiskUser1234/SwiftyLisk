@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -33,7 +33,7 @@ import Alamofire
 import Foundation
 import SwiftyJSON
 
-/* 
+/*
  To prevent http request memory leaks:
  - https://stackoverflow.com/questions/32199494/how-to-disable-caching-in-alamofire
  - https://github.com/Alamofire/Alamofire/issues/157
@@ -56,7 +56,7 @@ class Api {
     }
     
     private static var queue = OperationQueue()
-
+    
     // From Alamofire
     public enum HTTPMethod: String {
         case options = "OPTIONS"
@@ -71,11 +71,11 @@ class Api {
     }
     
     open class func request(module: String,
-                        submodule: String?,
-                        method: HTTPMethod,
-                        query: [String : String]? = nil,
-                        json: [String : Any]? = nil,
-                        callback: @escaping Callback) {
+                            submodule: String?,
+                            method: HTTPMethod,
+                            query: [String : String]? = nil,
+                            json: [String : Any]? = nil,
+                            callback: @escaping Callback) {
         if sessionManager == nil {
             setup()
         }
@@ -108,7 +108,7 @@ class Api {
         var request = URLRequest(url: url)
         
         // Uncomment to enable printing each url.
-//        print(url.absoluteString)
+        //        print(url.absoluteString)
         
         request.httpMethod = method.rawValue
         

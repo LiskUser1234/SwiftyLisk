@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -42,10 +42,10 @@ open class AccountAPI {
     ///   - secret: The passphrase to unlock the account
     ///   - callback: The function that will be called with information about the request.
     ///
-    /// For information about the response see 
+    /// For information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#open-account
     open class func open(secret: String,
-                     callback: @escaping Callback) {
+                         callback: @escaping Callback) {
         let data = [
             "secret": secret
         ]
@@ -66,7 +66,7 @@ open class AccountAPI {
     /// For information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-balance
     open class func getBalance(address: String,
-                           callback: @escaping Callback) {
+                               callback: @escaping Callback) {
         let data = [
             "address": address
         ]
@@ -87,7 +87,7 @@ open class AccountAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-account-public-key
     open class func getPublicKey(address: String,
-                             callback: @escaping Callback) {
+                                 callback: @escaping Callback) {
         let data = [
             "address": address
         ]
@@ -108,7 +108,7 @@ open class AccountAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#generate-public-key
     open class func generatePublicKey(secret: String,
-                                  callback: @escaping Callback) {
+                                      callback: @escaping Callback) {
         let data = [
             "secret": secret
         ]
@@ -123,15 +123,36 @@ open class AccountAPI {
     /// Gets public data about an address.
     ///
     /// - Parameters:
-    ///   - address: The address whose data will be returned
+    ///   - address: The address of the account whose data will be returned
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-account
     open class func get(address: String,
-                    callback: @escaping Callback) {
+                        callback: @escaping Callback) {
         let data = [
             "address": address
+        ]
+        
+        Api.request(module: moduleName,
+                    submodule: nil,
+                    method: .get,
+                    query: data,
+                    callback: callback)
+    }
+    
+    /// Gets public data about an address.
+    ///
+    /// - Parameters:
+    ///   - publicKey: The public key of the account whose data will be returned
+    ///   - callback: The function that will be called with information about the request
+    ///
+    /// For more information about the response see
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-account
+    open class func get(publicKey: String,
+                        callback: @escaping Callback) {
+        let data = [
+            "publicKey": publicKey
         ]
         
         Api.request(module: moduleName,
@@ -150,7 +171,7 @@ open class AccountAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-delegates
     open class func getDelegates(address: String,
-                             callback: @escaping Callback) {
+                                 callback: @escaping Callback) {
         let data = [
             "address": address
         ]
@@ -174,10 +195,10 @@ open class AccountAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#put-delegates
     open class func putDelegates(passphrase: String,
-                             secondPassphrase: String?,
-                             publicKey: String?,
-                             delegates: [String],
-                             callback: @escaping Callback) {
+                                 secondPassphrase: String?,
+                                 publicKey: String?,
+                                 delegates: [String],
+                                 callback: @escaping Callback) {
         var form: [String : Any] = [
             "secret": passphrase,
             "delegates": delegates

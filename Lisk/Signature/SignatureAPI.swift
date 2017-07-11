@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -36,7 +36,7 @@ class Signature {
     
     /// Gets the fee to register a second signature.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-signature-fees
@@ -47,23 +47,58 @@ class Signature {
                     callback: callback)
     }
     
-    /// Adds a second signature to the account
+    /// Adds a second signature to a standard account
     ///
     /// - Parameters:
     ///   - secret: The passphrase from which the address is derived
     ///   - secondSecret: The second passphrase to add to the address derived from `secret`
+    ///   - publicKey: Optional: the expected public key associated with the account derived from `secret`
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-  /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#add-second-signature
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#add-second-signature
     open class func addSecondSignature(secret: String,
-                                   secondSecret: String,
-                                   callback: @escaping Callback) {
-        let query = [
+                                       secondSecret: String,
+                                       publicKey: String?,
+                                       callback: @escaping Callback) {
+        var query = [
             "secret": secret,
             "secondSecret": secondSecret
-            // TODO: expected public key. Is public key for second sig or for first sig?
         ]
+        
+        if let publicKey = publicKey {
+            query["publicKey"] = publicKey
+        }
+        
+        Api.request(module: moduleName,
+                    submodule: nil,
+                    method: .put,
+                    query: query,
+                    callback: callback)
+    }
+    
+    /// Adds a second signature to a multisig account
+    ///
+    /// - Parameters:
+    ///   - secret: The passphrase from which the address is derived
+    ///   - secondSecret: The second passphrase to add to the address derived from `secret`
+    ///   - publicKey: Optional: the expected public key associated with the account derived from `secret`
+    ///   - callback: The function that will be called with information about the request
+    ///
+    /// For more information about the response see
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#add-second-signature
+    open class func addMultisigSecondSignature(secret: String,
+                                               secondSecret: String,
+                                               publicKey: String?,
+                                               callback: @escaping Callback) {
+        var query = [
+            "secret": secret,
+            "secondSecret": secondSecret
+        ]
+        
+        if let publicKey = publicKey {
+            query["multisigAccountPublicKey"] = publicKey
+        }
         
         Api.request(module: moduleName,
                     submodule: nil,

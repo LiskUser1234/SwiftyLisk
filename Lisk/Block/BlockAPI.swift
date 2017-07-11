@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -42,9 +42,9 @@ class BlockAPI {
     ///   - callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-  /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blocks
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blocks
     open class func getAll(query: [String : String],
-                       callback: @escaping Callback) {
+                           callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: nil,
                     method: .get,
@@ -61,7 +61,7 @@ class BlockAPI {
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-block
     open class func get(id: String,
-                    callback: @escaping Callback) {
+                        callback: @escaping Callback) {
         let data = [
             "id": id
         ]
@@ -75,10 +75,10 @@ class BlockAPI {
     
     /// Gets the fee for funds transfer transactions.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
- /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-fee
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-fee
     open class func getBlockchainFee(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getFee",
@@ -88,10 +88,10 @@ class BlockAPI {
     
     /// Get the fee for all possible transaction types on the Lisk network.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-  /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-fees-schedule
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-fees-schedule
     open class func getBlockchainFees(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getFees",
@@ -101,10 +101,10 @@ class BlockAPI {
     
     /// Gets the reward for the next block that will be added to the Lisk blockchain.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-   /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-reward-schedule
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-reward-schedule
     open class func getBlockReward(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getReward",
@@ -114,10 +114,10 @@ class BlockAPI {
     
     /// Gets the current supply of Lisks.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
- /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-supply-of-available-lisk
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-supply-of-available-lisk
     open class func getLisksSupply(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getSupply",
@@ -127,10 +127,10 @@ class BlockAPI {
     
     /// Gets the height of the current peer's copy of the Lisk blockchain.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-  /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-height
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-height
     open class func getBlockchainHeight(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getHeight",
@@ -140,10 +140,10 @@ class BlockAPI {
     
     /// Gets the status of the Lisk blockchain, which includes the blockchain's height, tx fee, milestone, reward and supply.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-  /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#gets-status-of-height-fee-milestone-blockreward-and-supply
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#gets-status-of-height-fee-milestone-blockreward-and-supply
     open class func getStatus(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getStatus",
@@ -151,13 +151,23 @@ class BlockAPI {
                     callback: callback)
     }
     
-    /// Gets the nethash of the blockchain on a client.
+    /// Gets the Broadhash of the blockchain on a client.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func getBroadhash(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "getBroadhash",
+                    method: .get,
+                    callback: callback)
+    }
+    
+    /// Gets the Nethash of the blockchain on a client.
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
-   /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-nethash
-    open class func getNetHash(callback: @escaping Callback) {
+    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-nethash
+    open class func getNethash(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getNethash",
                     method: .get,
@@ -166,13 +176,23 @@ class BlockAPI {
     
     /// Gets the next milestone of the Lisk blockchain.
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-blockchain-milestone
     open class func getMilestone(callback: @escaping Callback) {
         Api.request(module: moduleName,
                     submodule: "getMilestone",
+                    method: .get,
+                    callback: callback)
+    }
+    
+    /// Gets the blockchain's epoch time (UNIX time starting from
+    ///
+    /// - Parameter callback: The function that will be called with information about the request
+    open class func getEpoch(callback: @escaping Callback) {
+        Api.request(module: moduleName,
+                    submodule: "getEpoch",
                     method: .get,
                     callback: callback)
     }

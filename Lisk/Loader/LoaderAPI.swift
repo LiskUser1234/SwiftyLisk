@@ -1,5 +1,5 @@
 /*
-The MIT License
+ The MIT License
  
  Copyright (C) 2017  LiskUser1234
  - Github: https://github.com/liskuser1234
@@ -36,7 +36,7 @@ class LoaderAPI {
     
     /// Get the status of the blockchain
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-loading-status
@@ -46,10 +46,10 @@ class LoaderAPI {
                     method: .get,
                     callback: callback)
     }
- 
+    
     /// Get the synchronisation status of the client
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-synchronization-status
@@ -62,13 +62,13 @@ class LoaderAPI {
     
     /// Checks whether the blockchain is currently synced with the network
     ///
-    ///   - callback: The function that will be called with information about the request
+    /// - Parameter callback: The function that will be called with information about the request
     ///
     /// For more information about the response see
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#get-block-receipt-status
     open class func ping(callback: @escaping Callback) {
         Api.request(module: moduleName,
-                    submodule: "statu/ping",
+                    submodule: "status/ping",
                     method: .get,
                     callback: callback)
     }
