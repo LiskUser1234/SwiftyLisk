@@ -8,6 +8,10 @@ SwiftyLisk allows you to add blockchain functionalities to any Swift app for iOS
 - Xcode >= 8.1
 - Swift >= 3
 
+## Compatibility
+
+SwiftyLisk is designed to communicate with any Lisk node running Lisk 0.9.2. Before communicating with nodes running a version of Lisk other than 0.9.2, make sure all needed API calls are supported by the node's version of Lisk.
+
 ## Integration
 
 1. Close your Xcode project
