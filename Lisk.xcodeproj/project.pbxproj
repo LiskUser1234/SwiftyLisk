@@ -8,27 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95B1F12BD08004C8D16 /* AccountAPI.swift */; };
-		8451C97F1F12BD08004C8D16 /* AccountGeneratePublicKeyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95D1F12BD08004C8D16 /* AccountGeneratePublicKeyOperation.swift */; };
-		8451C9801F12BD08004C8D16 /* AccountGetBalanceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95E1F12BD08004C8D16 /* AccountGetBalanceOperation.swift */; };
-		8451C9811F12BD08004C8D16 /* AccountGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95F1F12BD08004C8D16 /* AccountGetOperation.swift */; };
-		8451C9821F12BD08004C8D16 /* AccountGetPublicKeyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9601F12BD08004C8D16 /* AccountGetPublicKeyOperation.swift */; };
-		8451C9831F12BD08004C8D16 /* AccountOpenOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9611F12BD08004C8D16 /* AccountOpenOperation.swift */; };
 		8451C9841F12BD08004C8D16 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9621F12BD08004C8D16 /* Api.swift */; };
 		8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9641F12BD08004C8D16 /* AppsAPI.swift */; };
 		8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9661F12BD08004C8D16 /* BlockAPI.swift */; };
-		8451C9871F12BD08004C8D16 /* BlockGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9681F12BD08004C8D16 /* BlockGetAllOperation.swift */; };
-		8451C9881F12BD08004C8D16 /* BlockGetBlockchainFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9691F12BD08004C8D16 /* BlockGetBlockchainFeeOperation.swift */; };
-		8451C9891F12BD08004C8D16 /* BlockGetBlockchainHeightOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C96A1F12BD08004C8D16 /* BlockGetBlockchainHeightOperation.swift */; };
 		8451C98A1F12BD08004C8D16 /* DelegateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C96C1F12BD08004C8D16 /* DelegateAPI.swift */; };
-		8451C98B1F12BD08004C8D16 /* DelegateGetVotersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C96E1F12BD08004C8D16 /* DelegateGetVotersOperation.swift */; };
 		8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9701F12BD08004C8D16 /* LoaderAPI.swift */; };
 		8451C98D1F12BD08004C8D16 /* MultisignatureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9721F12BD08004C8D16 /* MultisignatureAPI.swift */; };
-		8451C98E1F12BD08004C8D16 /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9731F12BD08004C8D16 /* NetworkOperation.swift */; };
 		8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9751F12BD08004C8D16 /* PeerAPI.swift */; };
 		8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9771F12BD08004C8D16 /* SignatureAPI.swift */; };
-		8451C9911F12BD08004C8D16 /* TransacionGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C97A1F12BD08004C8D16 /* TransacionGetAllOperation.swift */; };
-		8451C9921F12BD08004C8D16 /* TransactionGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C97B1F12BD08004C8D16 /* TransactionGetOperation.swift */; };
-		8451C9931F12BD08004C8D16 /* TransactionSendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C97C1F12BD08004C8D16 /* TransactionSendOperation.swift */; };
 		8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */; };
 		84BE2C571F12BCD100D9FF8B /* Lisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BE2C551F12BCD100D9FF8B /* Lisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DCB4B551081067F937BE7CF /* Pods_Lisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5858E6BC760048611DFD109F /* Pods_Lisk.framework */; };
@@ -38,27 +25,14 @@
 		1B3AA0FA7836E97EC87486F4 /* Pods-Lisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisk/Pods-Lisk.debug.xcconfig"; sourceTree = "<group>"; };
 		5858E6BC760048611DFD109F /* Pods_Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8451C95B1F12BD08004C8D16 /* AccountAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
-		8451C95D1F12BD08004C8D16 /* AccountGeneratePublicKeyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGeneratePublicKeyOperation.swift; sourceTree = "<group>"; };
-		8451C95E1F12BD08004C8D16 /* AccountGetBalanceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetBalanceOperation.swift; sourceTree = "<group>"; };
-		8451C95F1F12BD08004C8D16 /* AccountGetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetOperation.swift; sourceTree = "<group>"; };
-		8451C9601F12BD08004C8D16 /* AccountGetPublicKeyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetPublicKeyOperation.swift; sourceTree = "<group>"; };
-		8451C9611F12BD08004C8D16 /* AccountOpenOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOpenOperation.swift; sourceTree = "<group>"; };
 		8451C9621F12BD08004C8D16 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8451C9641F12BD08004C8D16 /* AppsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsAPI.swift; sourceTree = "<group>"; };
 		8451C9661F12BD08004C8D16 /* BlockAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockAPI.swift; sourceTree = "<group>"; };
-		8451C9681F12BD08004C8D16 /* BlockGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetAllOperation.swift; sourceTree = "<group>"; };
-		8451C9691F12BD08004C8D16 /* BlockGetBlockchainFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainFeeOperation.swift; sourceTree = "<group>"; };
-		8451C96A1F12BD08004C8D16 /* BlockGetBlockchainHeightOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainHeightOperation.swift; sourceTree = "<group>"; };
 		8451C96C1F12BD08004C8D16 /* DelegateAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateAPI.swift; sourceTree = "<group>"; };
-		8451C96E1F12BD08004C8D16 /* DelegateGetVotersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetVotersOperation.swift; sourceTree = "<group>"; };
 		8451C9701F12BD08004C8D16 /* LoaderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderAPI.swift; sourceTree = "<group>"; };
 		8451C9721F12BD08004C8D16 /* MultisignatureAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureAPI.swift; sourceTree = "<group>"; };
-		8451C9731F12BD08004C8D16 /* NetworkOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		8451C9751F12BD08004C8D16 /* PeerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerAPI.swift; sourceTree = "<group>"; };
 		8451C9771F12BD08004C8D16 /* SignatureAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureAPI.swift; sourceTree = "<group>"; };
-		8451C97A1F12BD08004C8D16 /* TransacionGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransacionGetAllOperation.swift; sourceTree = "<group>"; };
-		8451C97B1F12BD08004C8D16 /* TransactionGetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetOperation.swift; sourceTree = "<group>"; };
-		8451C97C1F12BD08004C8D16 /* TransactionSendOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionSendOperation.swift; sourceTree = "<group>"; };
 		8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAPI.swift; sourceTree = "<group>"; };
 		84BE2C521F12BCD100D9FF8B /* Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE2C551F12BCD100D9FF8B /* Lisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lisk.h; sourceTree = "<group>"; };
@@ -90,21 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				8451C95B1F12BD08004C8D16 /* AccountAPI.swift */,
-				8451C95C1F12BD08004C8D16 /* Operations */,
 			);
 			path = Account;
-			sourceTree = "<group>";
-		};
-		8451C95C1F12BD08004C8D16 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				8451C95D1F12BD08004C8D16 /* AccountGeneratePublicKeyOperation.swift */,
-				8451C95E1F12BD08004C8D16 /* AccountGetBalanceOperation.swift */,
-				8451C95F1F12BD08004C8D16 /* AccountGetOperation.swift */,
-				8451C9601F12BD08004C8D16 /* AccountGetPublicKeyOperation.swift */,
-				8451C9611F12BD08004C8D16 /* AccountOpenOperation.swift */,
-			);
-			path = Operations;
 			sourceTree = "<group>";
 		};
 		8451C9631F12BD08004C8D16 /* Apps */ = {
@@ -119,36 +80,16 @@
 			isa = PBXGroup;
 			children = (
 				8451C9661F12BD08004C8D16 /* BlockAPI.swift */,
-				8451C9671F12BD08004C8D16 /* Operations */,
 			);
 			path = Block;
-			sourceTree = "<group>";
-		};
-		8451C9671F12BD08004C8D16 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				8451C9681F12BD08004C8D16 /* BlockGetAllOperation.swift */,
-				8451C9691F12BD08004C8D16 /* BlockGetBlockchainFeeOperation.swift */,
-				8451C96A1F12BD08004C8D16 /* BlockGetBlockchainHeightOperation.swift */,
-			);
-			path = Operations;
 			sourceTree = "<group>";
 		};
 		8451C96B1F12BD08004C8D16 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				8451C96C1F12BD08004C8D16 /* DelegateAPI.swift */,
-				8451C96D1F12BD08004C8D16 /* Operations */,
 			);
 			path = Delegate;
-			sourceTree = "<group>";
-		};
-		8451C96D1F12BD08004C8D16 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				8451C96E1F12BD08004C8D16 /* DelegateGetVotersOperation.swift */,
-			);
-			path = Operations;
 			sourceTree = "<group>";
 		};
 		8451C96F1F12BD08004C8D16 /* Loader */ = {
@@ -186,20 +127,9 @@
 		8451C9781F12BD08004C8D16 /* Transaction */ = {
 			isa = PBXGroup;
 			children = (
-				8451C9791F12BD08004C8D16 /* Operations */,
 				8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */,
 			);
 			path = Transaction;
-			sourceTree = "<group>";
-		};
-		8451C9791F12BD08004C8D16 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				8451C97A1F12BD08004C8D16 /* TransacionGetAllOperation.swift */,
-				8451C97B1F12BD08004C8D16 /* TransactionGetOperation.swift */,
-				8451C97C1F12BD08004C8D16 /* TransactionSendOperation.swift */,
-			);
-			path = Operations;
 			sourceTree = "<group>";
 		};
 		84BE2C481F12BCD100D9FF8B = {
@@ -230,7 +160,6 @@
 				8451C96B1F12BD08004C8D16 /* Delegate */,
 				8451C96F1F12BD08004C8D16 /* Loader */,
 				8451C9711F12BD08004C8D16 /* Multisignature */,
-				8451C9731F12BD08004C8D16 /* NetworkOperation.swift */,
 				8451C9741F12BD08004C8D16 /* Peer */,
 				8451C9761F12BD08004C8D16 /* Signature */,
 				8451C9781F12BD08004C8D16 /* Transaction */,
@@ -364,29 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8451C9801F12BD08004C8D16 /* AccountGetBalanceOperation.swift in Sources */,
-				8451C9891F12BD08004C8D16 /* BlockGetBlockchainHeightOperation.swift in Sources */,
-				8451C9931F12BD08004C8D16 /* TransactionSendOperation.swift in Sources */,
-				8451C9881F12BD08004C8D16 /* BlockGetBlockchainFeeOperation.swift in Sources */,
-				8451C9921F12BD08004C8D16 /* TransactionGetOperation.swift in Sources */,
-				8451C9821F12BD08004C8D16 /* AccountGetPublicKeyOperation.swift in Sources */,
-				8451C98B1F12BD08004C8D16 /* DelegateGetVotersOperation.swift in Sources */,
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
 				8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */,
 				8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */,
-				8451C9871F12BD08004C8D16 /* BlockGetAllOperation.swift in Sources */,
 				8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */,
 				8451C98D1F12BD08004C8D16 /* MultisignatureAPI.swift in Sources */,
-				8451C9811F12BD08004C8D16 /* AccountGetOperation.swift in Sources */,
 				8451C98A1F12BD08004C8D16 /* DelegateAPI.swift in Sources */,
-				8451C97F1F12BD08004C8D16 /* AccountGeneratePublicKeyOperation.swift in Sources */,
-				8451C9911F12BD08004C8D16 /* TransacionGetAllOperation.swift in Sources */,
 				8451C9841F12BD08004C8D16 /* Api.swift in Sources */,
 				8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */,
 				8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */,
-				8451C9831F12BD08004C8D16 /* AccountOpenOperation.swift in Sources */,
-				8451C98E1F12BD08004C8D16 /* NetworkOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
