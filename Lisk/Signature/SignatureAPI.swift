@@ -31,7 +31,7 @@
 
 import Foundation
 
-class Signature {
+class SignatureAPI {
     private static let moduleName = "signatures"
     
     /// Gets the fee to register a second signature.
