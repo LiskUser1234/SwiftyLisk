@@ -47,7 +47,7 @@ class SignatureAPI {
                     callback: callback)
     }
     
-    /// Adds a second signature to a standard account
+    /// Adds a second signature
     ///
     /// - Parameters:
     ///   - secret: The passphrase from which the address is derived
@@ -60,6 +60,7 @@ class SignatureAPI {
     open class func addSecondSignature(secret: String,
                                        secondSecret: String,
                                        publicKey: String?,
+                                       isMultisig: Bool,
                                        callback: @escaping Callback) {
         var query = [
             "secret": secret,
@@ -67,7 +68,11 @@ class SignatureAPI {
         ]
         
         if let publicKey = publicKey {
-            query["publicKey"] = publicKey
+            if isMultisig {
+                query["multisigAccountPublicKey"] = publicKey
+            } else {
+                query["publicKey"] = publicKey
+            }
         }
         
         Api.request(module: moduleName,
@@ -76,35 +81,5 @@ class SignatureAPI {
                     query: query,
                     callback: callback)
     }
-    
-    /// Adds a second signature to a multisig account
-    ///
-    /// - Parameters:
-    ///   - secret: The passphrase from which the address is derived
-    ///   - secondSecret: The second passphrase to add to the address derived from `secret`
-    ///   - publicKey: Optional: the expected public key associated with the account derived from `secret`
-    ///   - callback: The function that will be called with information about the request
-    ///
-    /// For more information about the response see
-    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#add-second-signature
-    open class func addMultisigSecondSignature(secret: String,
-                                               secondSecret: String,
-                                               publicKey: String?,
-                                               callback: @escaping Callback) {
-        var query = [
-            "secret": secret,
-            "secondSecret": secondSecret
-        ]
         
-        if let publicKey = publicKey {
-            query["multisigAccountPublicKey"] = publicKey
-        }
-        
-        Api.request(module: moduleName,
-                    submodule: nil,
-                    method: .put,
-                    query: query,
-                    callback: callback)
-    }
-    
 }
