@@ -179,7 +179,7 @@ class TransactionAPI {
                     callback: callback)
     }
     
-    /// Propagate a transaction on the Lisk network (standard accounts only)
+    /// Propagate a transaction on the Lisk network
     ///
     /// - Parameters:
     ///   - passphrase: The passphrase of the sending address
@@ -193,6 +193,7 @@ class TransactionAPI {
     /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#send-transaction
     open class func send(passphrase: String,
                          publicKey: String?,
+                         isMultisig: Bool,
                          amount: Double,
                          recipientId: String,
                          secondPassphrase: String?,
@@ -204,46 +205,11 @@ class TransactionAPI {
         ]
         
         if let publicKey = publicKey {
-            data["publicKey"] = publicKey
-        }
-        
-        if let secondPassphrase = secondPassphrase {
-            data["secondSecret"] = secondPassphrase
-        }
-        
-        Api.request(module: moduleName,
-                    submodule: nil,
-                    method: .put,
-                    json: data,
-                    callback: callback)
-    }
-    
-    /// Propagate a transaction on the Lisk network (multisig accounts only)
-    ///
-    /// - Parameters:
-    ///   - passphrase: The passphrase of the sending address
-    ///   - publicKey: The expected public key associated with the account derived from `passphrase`
-    ///   - amount: The amount to send, where LSK 1 = 100_000_000 units
-    ///   - recipientId: The address to which `amount` will be sent to
-    ///   - secondPassphrase: Optional: the second passphrase of the sending address
-    ///   - callback: The function that will be called with information about the request
-    ///
-    /// For more information about the response see
-    /// https://github.com/LiskArchive/lisk-wiki/wiki/Lisk-API-Reference#send-transaction
-    open class func multisigSend(passphrase: String,
-                                 publicKey: String?,
-                                 amount: Double,
-                                 recipientId: String,
-                                 secondPassphrase: String?,
-                                 callback: @escaping Callback) {
-        var data: [String : Any] = [
-            "secret": passphrase,
-            "recipientId": recipientId,
-            "amount": amount
-        ]
-        
-        if let publicKey = publicKey {
-            data["multisigAccountPublicKey"] = publicKey
+            if isMultisig {
+                data["multisigAccountPublicKey"] = publicKey
+            } else {
+                data["publicKey"] = publicKey
+            }
         }
         
         if let secondPassphrase = secondPassphrase {
