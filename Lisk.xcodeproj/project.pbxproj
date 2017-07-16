@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */; };
+		842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */; };
 		8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95B1F12BD08004C8D16 /* AccountAPI.swift */; };
 		8451C9841F12BD08004C8D16 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9621F12BD08004C8D16 /* Api.swift */; };
 		8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9641F12BD08004C8D16 /* AppsAPI.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		1B3AA0FA7836E97EC87486F4 /* Pods-Lisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisk/Pods-Lisk.debug.xcconfig"; sourceTree = "<group>"; };
 		5858E6BC760048611DFD109F /* Pods_Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureGetFeeOperation.swift; sourceTree = "<group>"; };
+		842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureAddSecondSignatureOperation.swift; sourceTree = "<group>"; };
 		8451C95B1F12BD08004C8D16 /* AccountAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
 		8451C9621F12BD08004C8D16 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8451C9641F12BD08004C8D16 /* AppsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsAPI.swift; sourceTree = "<group>"; };
@@ -74,6 +78,15 @@
 				5858E6BC760048611DFD109F /* Pods_Lisk.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842494F91F1BBFE90083A072 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */,
+				842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		8451C95A1F12BD08004C8D16 /* Account */ = {
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9771F12BD08004C8D16 /* SignatureAPI.swift */,
+				842494F91F1BBFE90083A072 /* Operations */,
 			);
 			path = Signature;
 			sourceTree = "<group>";
@@ -326,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */,
+				842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */,
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
 				845FA8C11F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift in Sources */,
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
@@ -343,6 +358,7 @@
 				8451C9841F12BD08004C8D16 /* Api.swift in Sources */,
 				8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */,
 				8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */,
+				842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
