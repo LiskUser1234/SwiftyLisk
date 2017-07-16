@@ -31,7 +31,7 @@
 
 import Foundation
 
-class Peer {
+class PeerAPI {
     private static let moduleName = "peers"
     
     /// Gets a list of all peers matching the given query.
