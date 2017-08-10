@@ -27,6 +27,10 @@
 		845FA8C41F182B8700CDCEE0 /* CallbackOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */; };
 		845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */; };
 		845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */; };
+		8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */; };
+		8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */; };
+		8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */; };
+		8488B1C81F3D103800B8D073 /* PeerGetPeersCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */; };
 		84BE2C571F12BCD100D9FF8B /* Lisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BE2C551F12BCD100D9FF8B /* Lisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DCB4B551081067F937BE7CF /* Pods_Lisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5858E6BC760048611DFD109F /* Pods_Lisk.framework */; };
 /* End PBXBuildFile section */
@@ -54,6 +58,10 @@
 		845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackOperation.swift; sourceTree = "<group>"; };
 		845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetDelegatesOperation.swift; sourceTree = "<group>"; };
 		845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPutDelegatesOperation.swift; sourceTree = "<group>"; };
+		8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersListOperation.swift; sourceTree = "<group>"; };
+		8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerOperation.swift; sourceTree = "<group>"; };
+		8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerVersion.swift; sourceTree = "<group>"; };
+		8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersCount.swift; sourceTree = "<group>"; };
 		84BE2C521F12BCD100D9FF8B /* Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE2C551F12BCD100D9FF8B /* Lisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lisk.h; sourceTree = "<group>"; };
 		84BE2C561F12BCD100D9FF8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 		8451C9741F12BD08004C8D16 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
+				8488B1C01F3D0E0E00B8D073 /* Operations */,
 				8451C9751F12BD08004C8D16 /* PeerAPI.swift */,
 			);
 			path = Peer;
@@ -149,8 +158,8 @@
 		8451C9761F12BD08004C8D16 /* Signature */ = {
 			isa = PBXGroup;
 			children = (
-				8451C9771F12BD08004C8D16 /* SignatureAPI.swift */,
 				842494F91F1BBFE90083A072 /* Operations */,
+				8451C9771F12BD08004C8D16 /* SignatureAPI.swift */,
 			);
 			path = Signature;
 			sourceTree = "<group>";
@@ -173,6 +182,17 @@
 				845FA8BB1F182B7600CDCEE0 /* AccountGetOperation.swift */,
 				845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */,
 				845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8488B1C01F3D0E0E00B8D073 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */,
+				8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */,
+				8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */,
+				8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -339,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */,
 				845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */,
 				842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */,
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
@@ -346,6 +367,7 @@
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
 				845FA8BE1F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift in Sources */,
 				8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */,
+				8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */,
 				845FA8C21F182B7600CDCEE0 /* AccountOpenOperation.swift in Sources */,
 				8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */,
 				8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */,
@@ -358,6 +380,8 @@
 				8451C9841F12BD08004C8D16 /* Api.swift in Sources */,
 				8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */,
 				8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */,
+				8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */,
+				8488B1C81F3D103800B8D073 /* PeerGetPeersCount.swift in Sources */,
 				842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
