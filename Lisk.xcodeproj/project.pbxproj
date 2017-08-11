@@ -34,6 +34,18 @@
 		8481E3FB1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */; };
 		8481E3FD1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */; };
 		8481E3FF1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */; };
+		8481E4021F3DB44E00CAB4C0 /* BlockGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */; };
+		8481E4041F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */; };
+		8481E4061F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */; };
+		8481E4081F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */; };
+		8481E40A1F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */; };
+		8481E40C1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */; };
+		8481E40E1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */; };
+		8481E4101F3DB73000CAB4C0 /* BlockGetStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */; };
+		8481E4121F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */; };
+		8481E4141F3DB83200CAB4C0 /* BlockGetNethashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */; };
+		8481E4161F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */; };
+		8481E4181F3DB88800CAB4C0 /* BlockGetEpochOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */; };
 		8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */; };
 		8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */; };
 		8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */; };
@@ -72,6 +84,18 @@
 		8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderGetLoadingStatusOperation.swift; sourceTree = "<group>"; };
 		8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderGetSynchronisationStatusOperation.swift; sourceTree = "<group>"; };
 		8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderPingOperation.swift; sourceTree = "<group>"; };
+		8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetAllOperation.swift; sourceTree = "<group>"; };
+		8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockOperation.swift; sourceTree = "<group>"; };
+		8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainFeeOperation.swift; sourceTree = "<group>"; };
+		8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainFeesOperation.swift; sourceTree = "<group>"; };
+		8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockRewardOperation.swift; sourceTree = "<group>"; };
+		8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetSupplyOperation.swift; sourceTree = "<group>"; };
+		8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainHeightOperation.swift; sourceTree = "<group>"; };
+		8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetStatusOperation.swift; sourceTree = "<group>"; };
+		8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBroadhashOperation.swift; sourceTree = "<group>"; };
+		8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetNethashOperation.swift; sourceTree = "<group>"; };
+		8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetMilestoneOperation.swift; sourceTree = "<group>"; };
+		8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetEpochOperation.swift; sourceTree = "<group>"; };
 		8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersListOperation.swift; sourceTree = "<group>"; };
 		8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerOperation.swift; sourceTree = "<group>"; };
 		8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerVersion.swift; sourceTree = "<group>"; };
@@ -132,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9661F12BD08004C8D16 /* BlockAPI.swift */,
+				8481E4001F3DB44300CAB4C0 /* Operations */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -219,6 +244,25 @@
 				8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */,
 				8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */,
 				8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E4001F3DB44300CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */,
+				8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */,
+				8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */,
+				8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */,
+				8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */,
+				8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */,
+				8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */,
+				8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */,
+				8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */,
+				8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */,
+				8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */,
+				8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -399,6 +443,8 @@
 				8481E3FB1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift in Sources */,
 				8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */,
 				845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */,
+				8481E4141F3DB83200CAB4C0 /* BlockGetNethashOperation.swift in Sources */,
+				8481E4041F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift in Sources */,
 				842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */,
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
 				8481E3FF1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift in Sources */,
@@ -406,7 +452,9 @@
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
 				8481E3F81F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift in Sources */,
 				8481E3F61F3DA88100CAB4C0 /* MultisignatureSignOperation.swift in Sources */,
+				8481E4021F3DB44E00CAB4C0 /* BlockGetAllOperation.swift in Sources */,
 				845FA8BE1F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift in Sources */,
+				8481E40E1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift in Sources */,
 				8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */,
 				8481E3FD1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift in Sources */,
 				8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */,
@@ -414,9 +462,11 @@
 				8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */,
 				8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */,
 				845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */,
+				8481E40C1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift in Sources */,
 				845FA8BF1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift in Sources */,
 				845FA8C01F182B7600CDCEE0 /* AccountGetOperation.swift in Sources */,
 				8481E3F41F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift in Sources */,
+				8481E4081F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift in Sources */,
 				8481E3F21F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift in Sources */,
 				8451C98D1F12BD08004C8D16 /* MultisignatureAPI.swift in Sources */,
 				8451C98A1F12BD08004C8D16 /* DelegateAPI.swift in Sources */,
@@ -425,8 +475,14 @@
 				8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */,
 				8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */,
 				8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */,
+				8481E4181F3DB88800CAB4C0 /* BlockGetEpochOperation.swift in Sources */,
 				8488B1C81F3D103800B8D073 /* PeerGetPeersCount.swift in Sources */,
+				8481E40A1F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift in Sources */,
 				842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */,
+				8481E4161F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift in Sources */,
+				8481E4101F3DB73000CAB4C0 /* BlockGetStatusOperation.swift in Sources */,
+				8481E4121F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift in Sources */,
+				8481E4061F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
