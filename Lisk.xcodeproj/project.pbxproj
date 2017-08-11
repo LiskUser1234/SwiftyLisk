@@ -27,6 +27,10 @@
 		845FA8C41F182B8700CDCEE0 /* CallbackOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */; };
 		845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */; };
 		845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */; };
+		8481E3F21F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */; };
+		8481E3F41F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */; };
+		8481E3F61F3DA88100CAB4C0 /* MultisignatureSignOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */; };
+		8481E3F81F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */; };
 		8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */; };
 		8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */; };
 		8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */; };
@@ -58,6 +62,10 @@
 		845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackOperation.swift; sourceTree = "<group>"; };
 		845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetDelegatesOperation.swift; sourceTree = "<group>"; };
 		845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPutDelegatesOperation.swift; sourceTree = "<group>"; };
+		8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureCreateOperation.swift; sourceTree = "<group>"; };
+		8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureGetAccountsOperation.swift; sourceTree = "<group>"; };
+		8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureSignOperation.swift; sourceTree = "<group>"; };
+		8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureGetPendingTransactionsOperation.swift; sourceTree = "<group>"; };
 		8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersListOperation.swift; sourceTree = "<group>"; };
 		8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerOperation.swift; sourceTree = "<group>"; };
 		8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerVersion.swift; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 		8451C9711F12BD08004C8D16 /* Multisignature */ = {
 			isa = PBXGroup;
 			children = (
+				8481E3F01F3DA64F00CAB4C0 /* Operations */,
 				8451C9721F12BD08004C8D16 /* MultisignatureAPI.swift */,
 			);
 			path = Multisignature;
@@ -182,6 +191,17 @@
 				845FA8BB1F182B7600CDCEE0 /* AccountGetOperation.swift */,
 				845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */,
 				845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E3F01F3DA64F00CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */,
+				8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */,
+				8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */,
+				8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -365,6 +385,8 @@
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
 				845FA8C11F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift in Sources */,
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
+				8481E3F81F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift in Sources */,
+				8481E3F61F3DA88100CAB4C0 /* MultisignatureSignOperation.swift in Sources */,
 				845FA8BE1F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift in Sources */,
 				8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */,
 				8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */,
@@ -374,6 +396,8 @@
 				845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */,
 				845FA8BF1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift in Sources */,
 				845FA8C01F182B7600CDCEE0 /* AccountGetOperation.swift in Sources */,
+				8481E3F41F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift in Sources */,
+				8481E3F21F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift in Sources */,
 				8451C98D1F12BD08004C8D16 /* MultisignatureAPI.swift in Sources */,
 				8451C98A1F12BD08004C8D16 /* DelegateAPI.swift in Sources */,
 				845FA8C41F182B8700CDCEE0 /* CallbackOperation.swift in Sources */,
