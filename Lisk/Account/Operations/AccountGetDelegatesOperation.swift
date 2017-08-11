@@ -39,8 +39,8 @@ open class AccountGetDelegatesOperation : APIOperation {
     private let delegatesPtr: UnsafeMutablePointer<[JSON]>
     
     public init(address: String,
-         delegatesPtr: UnsafeMutablePointer<[JSON]>,
-         errorPtr: UnsafeMutablePointer<String?>) {
+                delegatesPtr: UnsafeMutablePointer<[JSON]>,
+                errorPtr: UnsafeMutablePointer<String?>) {
         self.address = address
         
         self.delegatesPtr = delegatesPtr

@@ -39,8 +39,8 @@ open class AccountGetPublicKeyOperation : APIOperation {
     private let publicKeyPtr: UnsafeMutablePointer<String>
     
     public init(address: String,
-         publicKey: UnsafeMutablePointer<String>,
-         errorPtr: UnsafeMutablePointer<String?>) {
+                publicKey: UnsafeMutablePointer<String>,
+                errorPtr: UnsafeMutablePointer<String?>) {
         self.address = address
         self.publicKeyPtr = publicKey
         

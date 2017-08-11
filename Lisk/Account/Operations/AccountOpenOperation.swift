@@ -39,8 +39,8 @@ open class AccountOpenOperation : APIOperation {
     private let accountPtr: UnsafeMutablePointer<JSON>
     
     public init(secret: String,
-         accountPtr: UnsafeMutablePointer<JSON>,
-         errorPtr: UnsafeMutablePointer<String?>? = nil) {
+                accountPtr: UnsafeMutablePointer<JSON>,
+                errorPtr: UnsafeMutablePointer<String?>? = nil) {
         self.secret = secret
         self.accountPtr = accountPtr
         

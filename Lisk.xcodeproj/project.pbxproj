@@ -226,8 +226,8 @@
 		8451C9711F12BD08004C8D16 /* Multisignature */ = {
 			isa = PBXGroup;
 			children = (
-				8481E3F01F3DA64F00CAB4C0 /* Operations */,
 				8451C9721F12BD08004C8D16 /* MultisignatureAPI.swift */,
+				8481E3F01F3DA64F00CAB4C0 /* Operations */,
 			);
 			path = Multisignature;
 			sourceTree = "<group>";
@@ -235,8 +235,8 @@
 		8451C9741F12BD08004C8D16 /* Peer */ = {
 			isa = PBXGroup;
 			children = (
-				8488B1C01F3D0E0E00B8D073 /* Operations */,
 				8451C9751F12BD08004C8D16 /* PeerAPI.swift */,
+				8488B1C01F3D0E0E00B8D073 /* Operations */,
 			);
 			path = Peer;
 			sourceTree = "<group>";
@@ -244,8 +244,8 @@
 		8451C9761F12BD08004C8D16 /* Signature */ = {
 			isa = PBXGroup;
 			children = (
-				842494F91F1BBFE90083A072 /* Operations */,
 				8451C9771F12BD08004C8D16 /* SignatureAPI.swift */,
+				842494F91F1BBFE90083A072 /* Operations */,
 			);
 			path = Signature;
 			sourceTree = "<group>";

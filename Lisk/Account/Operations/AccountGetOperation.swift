@@ -40,8 +40,8 @@ open class AccountGetOperation : APIOperation {
     private let accountPtr: UnsafeMutablePointer<JSON>
     
     public init(address: String,
-         accountPtr: UnsafeMutablePointer<JSON>,
-         errorPtr: UnsafeMutablePointer<String?>) {
+                accountPtr: UnsafeMutablePointer<JSON>,
+                errorPtr: UnsafeMutablePointer<String?>) {
         self.address = address
         self.publicKey = nil
         
@@ -51,8 +51,8 @@ open class AccountGetOperation : APIOperation {
     }
     
     public init(publicKey: String,
-         accountPtr: UnsafeMutablePointer<JSON>,
-         errorPtr: UnsafeMutablePointer<String?>) {
+                accountPtr: UnsafeMutablePointer<JSON>,
+                errorPtr: UnsafeMutablePointer<String?>) {
         self.address = nil
         self.publicKey = publicKey
         

@@ -39,8 +39,8 @@ open class AccountGetBalanceOperation : APIOperation {
     private let balancePtr: UnsafeMutablePointer<Double>
     
     public init(address: String,
-         balancePtr: UnsafeMutablePointer<Double>,
-         errorPtr: UnsafeMutablePointer<String?>) {
+                balancePtr: UnsafeMutablePointer<Double>,
+                errorPtr: UnsafeMutablePointer<String?>) {
         self.address = address
         self.balancePtr = balancePtr
         

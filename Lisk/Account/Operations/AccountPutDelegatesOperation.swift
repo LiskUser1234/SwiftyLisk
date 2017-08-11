@@ -42,16 +42,16 @@ open class AccountPutDelegatesOperation : APIOperation {
     private let transactionPointer: UnsafeMutablePointer<JSON>?
     
     public init(passphrase: String,
-         secondPassphrase: String?,
-         publicKey: String?,
-         delegates: [String],
-         transactionPointer: UnsafeMutablePointer<JSON>?,
-         errorPtr: UnsafeMutablePointer<String?>? = nil) {
+                secondPassphrase: String?,
+                publicKey: String?,
+                delegates: [String],
+                transactionPointer: UnsafeMutablePointer<JSON>?,
+                errorPtr: UnsafeMutablePointer<String?>? = nil) {
         self.passphrase = passphrase
         self.secondPassphrase = secondPassphrase
         self.publicKey = publicKey
         self.delegates = delegates
-    
+        
         self.transactionPointer = transactionPointer
         
         super.init(errorPtr: errorPtr)
