@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */; };
+		842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */; };
 		8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C95B1F12BD08004C8D16 /* AccountAPI.swift */; };
 		8451C9841F12BD08004C8D16 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9621F12BD08004C8D16 /* Api.swift */; };
 		8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9641F12BD08004C8D16 /* AppsAPI.swift */; };
@@ -17,6 +19,59 @@
 		8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9751F12BD08004C8D16 /* PeerAPI.swift */; };
 		8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C9771F12BD08004C8D16 /* SignatureAPI.swift */; };
 		8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */; };
+		845FA8BE1F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8B91F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift */; };
+		845FA8BF1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8BA1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift */; };
+		845FA8C01F182B7600CDCEE0 /* AccountGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8BB1F182B7600CDCEE0 /* AccountGetOperation.swift */; };
+		845FA8C11F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8BC1F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift */; };
+		845FA8C21F182B7600CDCEE0 /* AccountOpenOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8BD1F182B7600CDCEE0 /* AccountOpenOperation.swift */; };
+		845FA8C41F182B8700CDCEE0 /* CallbackOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */; };
+		845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */; };
+		845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */; };
+		8481E3F21F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */; };
+		8481E3F41F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */; };
+		8481E3F61F3DA88100CAB4C0 /* MultisignatureSignOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */; };
+		8481E3F81F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */; };
+		8481E3FB1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */; };
+		8481E3FD1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */; };
+		8481E3FF1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */; };
+		8481E4021F3DB44E00CAB4C0 /* BlockGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */; };
+		8481E4041F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */; };
+		8481E4061F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */; };
+		8481E4081F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */; };
+		8481E40A1F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */; };
+		8481E40C1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */; };
+		8481E40E1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */; };
+		8481E4101F3DB73000CAB4C0 /* BlockGetStatusOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */; };
+		8481E4121F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */; };
+		8481E4141F3DB83200CAB4C0 /* BlockGetNethashOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */; };
+		8481E4161F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */; };
+		8481E4181F3DB88800CAB4C0 /* BlockGetEpochOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */; };
+		8481E41B1F3DB93A00CAB4C0 /* TransactionGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E41A1F3DB93A00CAB4C0 /* TransactionGetAllOperation.swift */; };
+		8481E41D1F3DB9C000CAB4C0 /* TransactionGetAllUnconfirmedOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E41C1F3DB9C000CAB4C0 /* TransactionGetAllUnconfirmedOperation.swift */; };
+		8481E41F1F3DBA1300CAB4C0 /* TransactionGetAllQueuedOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E41E1F3DBA1300CAB4C0 /* TransactionGetAllQueuedOperation.swift */; };
+		8481E4211F3DBA4000CAB4C0 /* TransactionGetAllMultisignaturesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4201F3DBA4000CAB4C0 /* TransactionGetAllMultisignaturesOperation.swift */; };
+		8481E4231F3DBA9000CAB4C0 /* TransactionGetTransactionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4221F3DBA9000CAB4C0 /* TransactionGetTransactionOperation.swift */; };
+		8481E4251F3DBB0200CAB4C0 /* TransactionGetUnconfirmedOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4241F3DBB0200CAB4C0 /* TransactionGetUnconfirmedOperation.swift */; };
+		8481E4271F3DBB2200CAB4C0 /* TransactionGetQueuedOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4261F3DBB2200CAB4C0 /* TransactionGetQueuedOperation.swift */; };
+		8481E4291F3DBB4800CAB4C0 /* TransactionGetMultisignatureOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4281F3DBB4800CAB4C0 /* TransactionGetMultisignatureOperation.swift */; };
+		8481E42B1F3DBB7100CAB4C0 /* TransactionCountOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E42A1F3DBB7100CAB4C0 /* TransactionCountOperation.swift */; };
+		8481E42D1F3DBC1400CAB4C0 /* TransactionSendOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E42C1F3DBC1400CAB4C0 /* TransactionSendOperation.swift */; };
+		8481E4301F3DC0FD00CAB4C0 /* DelegateBecomeDelegateOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E42F1F3DC0FD00CAB4C0 /* DelegateBecomeDelegateOperation.swift */; };
+		8481E4321F3DC80100CAB4C0 /* DelegateGetAllOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4311F3DC80100CAB4C0 /* DelegateGetAllOperation.swift */; };
+		8481E4341F3DC84200CAB4C0 /* DelegateGetOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4331F3DC84200CAB4C0 /* DelegateGetOperation.swift */; };
+		8481E4361F3DC8DD00CAB4C0 /* DelegateSearchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4351F3DC8DD00CAB4C0 /* DelegateSearchOperation.swift */; };
+		8481E4381F3DC93400CAB4C0 /* DelegateGetCountOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4371F3DC93400CAB4C0 /* DelegateGetCountOperation.swift */; };
+		8481E43A1F3DC97700CAB4C0 /* DelegateGetVotesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4391F3DC97700CAB4C0 /* DelegateGetVotesOperation.swift */; };
+		8481E43C1F3DC9C100CAB4C0 /* DelegateGetVotersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E43B1F3DC9C100CAB4C0 /* DelegateGetVotersOperation.swift */; };
+		8481E43E1F3DCA1700CAB4C0 /* DelegateToggleForgingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E43D1F3DCA1700CAB4C0 /* DelegateToggleForgingOperation.swift */; };
+		8481E4401F3DCB4C00CAB4C0 /* DelegateIsForgingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E43F1F3DCB4C00CAB4C0 /* DelegateIsForgingOperation.swift */; };
+		8481E4421F3DCC4400CAB4C0 /* DelegateGetForgedByAccountOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4411F3DCC4400CAB4C0 /* DelegateGetForgedByAccountOperation.swift */; };
+		8481E4441F3DCD7B00CAB4C0 /* DelegateGetNextForgersOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4431F3DCD7B00CAB4C0 /* DelegateGetNextForgersOperation.swift */; };
+		8481E4461F3DCE0900CAB4C0 /* DelegateGetFeeOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481E4451F3DCE0900CAB4C0 /* DelegateGetFeeOperation.swift */; };
+		8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */; };
+		8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */; };
+		8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */; };
+		8488B1C81F3D103800B8D073 /* PeerGetPeersCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */; };
 		84BE2C571F12BCD100D9FF8B /* Lisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BE2C551F12BCD100D9FF8B /* Lisk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DCB4B551081067F937BE7CF /* Pods_Lisk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5858E6BC760048611DFD109F /* Pods_Lisk.framework */; };
 /* End PBXBuildFile section */
@@ -24,6 +79,8 @@
 /* Begin PBXFileReference section */
 		1B3AA0FA7836E97EC87486F4 /* Pods-Lisk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lisk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lisk/Pods-Lisk.debug.xcconfig"; sourceTree = "<group>"; };
 		5858E6BC760048611DFD109F /* Pods_Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureGetFeeOperation.swift; sourceTree = "<group>"; };
+		842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureAddSecondSignatureOperation.swift; sourceTree = "<group>"; };
 		8451C95B1F12BD08004C8D16 /* AccountAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
 		8451C9621F12BD08004C8D16 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8451C9641F12BD08004C8D16 /* AppsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsAPI.swift; sourceTree = "<group>"; };
@@ -34,6 +91,59 @@
 		8451C9751F12BD08004C8D16 /* PeerAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerAPI.swift; sourceTree = "<group>"; };
 		8451C9771F12BD08004C8D16 /* SignatureAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignatureAPI.swift; sourceTree = "<group>"; };
 		8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAPI.swift; sourceTree = "<group>"; };
+		845FA8B91F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGeneratePublicKeyOperation.swift; sourceTree = "<group>"; };
+		845FA8BA1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetBalanceOperation.swift; sourceTree = "<group>"; };
+		845FA8BB1F182B7600CDCEE0 /* AccountGetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetOperation.swift; sourceTree = "<group>"; };
+		845FA8BC1F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetPublicKeyOperation.swift; sourceTree = "<group>"; };
+		845FA8BD1F182B7600CDCEE0 /* AccountOpenOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOpenOperation.swift; sourceTree = "<group>"; };
+		845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbackOperation.swift; sourceTree = "<group>"; };
+		845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountGetDelegatesOperation.swift; sourceTree = "<group>"; };
+		845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPutDelegatesOperation.swift; sourceTree = "<group>"; };
+		8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureCreateOperation.swift; sourceTree = "<group>"; };
+		8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureGetAccountsOperation.swift; sourceTree = "<group>"; };
+		8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureSignOperation.swift; sourceTree = "<group>"; };
+		8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultisignatureGetPendingTransactionsOperation.swift; sourceTree = "<group>"; };
+		8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderGetLoadingStatusOperation.swift; sourceTree = "<group>"; };
+		8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderGetSynchronisationStatusOperation.swift; sourceTree = "<group>"; };
+		8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderPingOperation.swift; sourceTree = "<group>"; };
+		8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetAllOperation.swift; sourceTree = "<group>"; };
+		8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockOperation.swift; sourceTree = "<group>"; };
+		8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainFeeOperation.swift; sourceTree = "<group>"; };
+		8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainFeesOperation.swift; sourceTree = "<group>"; };
+		8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockRewardOperation.swift; sourceTree = "<group>"; };
+		8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetSupplyOperation.swift; sourceTree = "<group>"; };
+		8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBlockchainHeightOperation.swift; sourceTree = "<group>"; };
+		8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetStatusOperation.swift; sourceTree = "<group>"; };
+		8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetBroadhashOperation.swift; sourceTree = "<group>"; };
+		8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetNethashOperation.swift; sourceTree = "<group>"; };
+		8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetMilestoneOperation.swift; sourceTree = "<group>"; };
+		8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockGetEpochOperation.swift; sourceTree = "<group>"; };
+		8481E41A1F3DB93A00CAB4C0 /* TransactionGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetAllOperation.swift; sourceTree = "<group>"; };
+		8481E41C1F3DB9C000CAB4C0 /* TransactionGetAllUnconfirmedOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetAllUnconfirmedOperation.swift; sourceTree = "<group>"; };
+		8481E41E1F3DBA1300CAB4C0 /* TransactionGetAllQueuedOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetAllQueuedOperation.swift; sourceTree = "<group>"; };
+		8481E4201F3DBA4000CAB4C0 /* TransactionGetAllMultisignaturesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetAllMultisignaturesOperation.swift; sourceTree = "<group>"; };
+		8481E4221F3DBA9000CAB4C0 /* TransactionGetTransactionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetTransactionOperation.swift; sourceTree = "<group>"; };
+		8481E4241F3DBB0200CAB4C0 /* TransactionGetUnconfirmedOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetUnconfirmedOperation.swift; sourceTree = "<group>"; };
+		8481E4261F3DBB2200CAB4C0 /* TransactionGetQueuedOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetQueuedOperation.swift; sourceTree = "<group>"; };
+		8481E4281F3DBB4800CAB4C0 /* TransactionGetMultisignatureOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGetMultisignatureOperation.swift; sourceTree = "<group>"; };
+		8481E42A1F3DBB7100CAB4C0 /* TransactionCountOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCountOperation.swift; sourceTree = "<group>"; };
+		8481E42C1F3DBC1400CAB4C0 /* TransactionSendOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionSendOperation.swift; sourceTree = "<group>"; };
+		8481E42F1F3DC0FD00CAB4C0 /* DelegateBecomeDelegateOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateBecomeDelegateOperation.swift; sourceTree = "<group>"; };
+		8481E4311F3DC80100CAB4C0 /* DelegateGetAllOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetAllOperation.swift; sourceTree = "<group>"; };
+		8481E4331F3DC84200CAB4C0 /* DelegateGetOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetOperation.swift; sourceTree = "<group>"; };
+		8481E4351F3DC8DD00CAB4C0 /* DelegateSearchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateSearchOperation.swift; sourceTree = "<group>"; };
+		8481E4371F3DC93400CAB4C0 /* DelegateGetCountOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetCountOperation.swift; sourceTree = "<group>"; };
+		8481E4391F3DC97700CAB4C0 /* DelegateGetVotesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetVotesOperation.swift; sourceTree = "<group>"; };
+		8481E43B1F3DC9C100CAB4C0 /* DelegateGetVotersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetVotersOperation.swift; sourceTree = "<group>"; };
+		8481E43D1F3DCA1700CAB4C0 /* DelegateToggleForgingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateToggleForgingOperation.swift; sourceTree = "<group>"; };
+		8481E43F1F3DCB4C00CAB4C0 /* DelegateIsForgingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateIsForgingOperation.swift; sourceTree = "<group>"; };
+		8481E4411F3DCC4400CAB4C0 /* DelegateGetForgedByAccountOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetForgedByAccountOperation.swift; sourceTree = "<group>"; };
+		8481E4431F3DCD7B00CAB4C0 /* DelegateGetNextForgersOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetNextForgersOperation.swift; sourceTree = "<group>"; };
+		8481E4451F3DCE0900CAB4C0 /* DelegateGetFeeOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateGetFeeOperation.swift; sourceTree = "<group>"; };
+		8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersListOperation.swift; sourceTree = "<group>"; };
+		8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerOperation.swift; sourceTree = "<group>"; };
+		8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeerVersion.swift; sourceTree = "<group>"; };
+		8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerGetPeersCount.swift; sourceTree = "<group>"; };
 		84BE2C521F12BCD100D9FF8B /* Lisk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lisk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BE2C551F12BCD100D9FF8B /* Lisk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lisk.h; sourceTree = "<group>"; };
 		84BE2C561F12BCD100D9FF8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,10 +170,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		842494F91F1BBFE90083A072 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				842494FA1F1BBFE90083A072 /* SignatureGetFeeOperation.swift */,
+				842494FC1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
 		8451C95A1F12BD08004C8D16 /* Account */ = {
 			isa = PBXGroup;
 			children = (
 				8451C95B1F12BD08004C8D16 /* AccountAPI.swift */,
+				845FA8B81F182B7600CDCEE0 /* Operations */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -80,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9661F12BD08004C8D16 /* BlockAPI.swift */,
+				8481E4001F3DB44300CAB4C0 /* Operations */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -88,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C96C1F12BD08004C8D16 /* DelegateAPI.swift */,
+				8481E42E1F3DC0F000CAB4C0 /* Operations */,
 			);
 			path = Delegate;
 			sourceTree = "<group>";
@@ -96,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9701F12BD08004C8D16 /* LoaderAPI.swift */,
+				8481E3F91F3DAA1200CAB4C0 /* Operations */,
 			);
 			path = Loader;
 			sourceTree = "<group>";
@@ -104,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9721F12BD08004C8D16 /* MultisignatureAPI.swift */,
+				8481E3F01F3DA64F00CAB4C0 /* Operations */,
 			);
 			path = Multisignature;
 			sourceTree = "<group>";
@@ -112,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9751F12BD08004C8D16 /* PeerAPI.swift */,
+				8488B1C01F3D0E0E00B8D073 /* Operations */,
 			);
 			path = Peer;
 			sourceTree = "<group>";
@@ -120,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				8451C9771F12BD08004C8D16 /* SignatureAPI.swift */,
+				842494F91F1BBFE90083A072 /* Operations */,
 			);
 			path = Signature;
 			sourceTree = "<group>";
@@ -128,8 +254,110 @@
 			isa = PBXGroup;
 			children = (
 				8451C97D1F12BD08004C8D16 /* TransactionAPI.swift */,
+				8481E4191F3DB92F00CAB4C0 /* Operations */,
 			);
 			path = Transaction;
+			sourceTree = "<group>";
+		};
+		845FA8B81F182B7600CDCEE0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				845FA8BD1F182B7600CDCEE0 /* AccountOpenOperation.swift */,
+				845FA8BA1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift */,
+				845FA8BC1F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift */,
+				845FA8B91F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift */,
+				845FA8BB1F182B7600CDCEE0 /* AccountGetOperation.swift */,
+				845FA8C51F18301400CDCEE0 /* AccountGetDelegatesOperation.swift */,
+				845FA8C71F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E3F01F3DA64F00CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E3F11F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift */,
+				8481E3F31F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift */,
+				8481E3F51F3DA88100CAB4C0 /* MultisignatureSignOperation.swift */,
+				8481E3F71F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E3F91F3DAA1200CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E3FA1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift */,
+				8481E3FC1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift */,
+				8481E3FE1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E4001F3DB44300CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E4011F3DB44E00CAB4C0 /* BlockGetAllOperation.swift */,
+				8481E4031F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift */,
+				8481E4051F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift */,
+				8481E4071F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift */,
+				8481E4091F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift */,
+				8481E40B1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift */,
+				8481E40D1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift */,
+				8481E40F1F3DB73000CAB4C0 /* BlockGetStatusOperation.swift */,
+				8481E4111F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift */,
+				8481E4131F3DB83200CAB4C0 /* BlockGetNethashOperation.swift */,
+				8481E4151F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift */,
+				8481E4171F3DB88800CAB4C0 /* BlockGetEpochOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E4191F3DB92F00CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E41A1F3DB93A00CAB4C0 /* TransactionGetAllOperation.swift */,
+				8481E41C1F3DB9C000CAB4C0 /* TransactionGetAllUnconfirmedOperation.swift */,
+				8481E41E1F3DBA1300CAB4C0 /* TransactionGetAllQueuedOperation.swift */,
+				8481E4201F3DBA4000CAB4C0 /* TransactionGetAllMultisignaturesOperation.swift */,
+				8481E4221F3DBA9000CAB4C0 /* TransactionGetTransactionOperation.swift */,
+				8481E4241F3DBB0200CAB4C0 /* TransactionGetUnconfirmedOperation.swift */,
+				8481E4261F3DBB2200CAB4C0 /* TransactionGetQueuedOperation.swift */,
+				8481E4281F3DBB4800CAB4C0 /* TransactionGetMultisignatureOperation.swift */,
+				8481E42A1F3DBB7100CAB4C0 /* TransactionCountOperation.swift */,
+				8481E42C1F3DBC1400CAB4C0 /* TransactionSendOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8481E42E1F3DC0F000CAB4C0 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8481E42F1F3DC0FD00CAB4C0 /* DelegateBecomeDelegateOperation.swift */,
+				8481E4311F3DC80100CAB4C0 /* DelegateGetAllOperation.swift */,
+				8481E4331F3DC84200CAB4C0 /* DelegateGetOperation.swift */,
+				8481E4351F3DC8DD00CAB4C0 /* DelegateSearchOperation.swift */,
+				8481E4371F3DC93400CAB4C0 /* DelegateGetCountOperation.swift */,
+				8481E4391F3DC97700CAB4C0 /* DelegateGetVotesOperation.swift */,
+				8481E43B1F3DC9C100CAB4C0 /* DelegateGetVotersOperation.swift */,
+				8481E43D1F3DCA1700CAB4C0 /* DelegateToggleForgingOperation.swift */,
+				8481E43F1F3DCB4C00CAB4C0 /* DelegateIsForgingOperation.swift */,
+				8481E4411F3DCC4400CAB4C0 /* DelegateGetForgedByAccountOperation.swift */,
+				8481E4431F3DCD7B00CAB4C0 /* DelegateGetNextForgersOperation.swift */,
+				8481E4451F3DCE0900CAB4C0 /* DelegateGetFeeOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		8488B1C01F3D0E0E00B8D073 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				8488B1C11F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift */,
+				8488B1C31F3D0EF500B8D073 /* PeerGetPeerOperation.swift */,
+				8488B1C51F3D0F7B00B8D073 /* PeerGetPeerVersion.swift */,
+				8488B1C71F3D103800B8D073 /* PeerGetPeersCount.swift */,
+			);
+			path = Operations;
 			sourceTree = "<group>";
 		};
 		84BE2C481F12BCD100D9FF8B = {
@@ -153,6 +381,7 @@
 		84BE2C541F12BCD100D9FF8B /* Lisk */ = {
 			isa = PBXGroup;
 			children = (
+				845FA8C31F182B8700CDCEE0 /* CallbackOperation.swift */,
 				8451C95A1F12BD08004C8D16 /* Account */,
 				8451C9621F12BD08004C8D16 /* Api.swift */,
 				8451C9631F12BD08004C8D16 /* Apps */,
@@ -293,16 +522,71 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8481E3FB1F3DAA1F00CAB4C0 /* LoaderGetLoadingStatusOperation.swift in Sources */,
+				8481E4461F3DCE0900CAB4C0 /* DelegateGetFeeOperation.swift in Sources */,
+				8481E4341F3DC84200CAB4C0 /* DelegateGetOperation.swift in Sources */,
+				8488B1C21F3D0E3F00B8D073 /* PeerGetPeersListOperation.swift in Sources */,
+				8481E4441F3DCD7B00CAB4C0 /* DelegateGetNextForgersOperation.swift in Sources */,
+				845FA8C81F1830C000CDCEE0 /* AccountPutDelegatesOperation.swift in Sources */,
+				8481E4141F3DB83200CAB4C0 /* BlockGetNethashOperation.swift in Sources */,
+				8481E4041F3DB4CD00CAB4C0 /* BlockGetBlockOperation.swift in Sources */,
+				8481E41D1F3DB9C000CAB4C0 /* TransactionGetAllUnconfirmedOperation.swift in Sources */,
+				842494FB1F1BBFE90083A072 /* SignatureGetFeeOperation.swift in Sources */,
+				8481E43C1F3DC9C100CAB4C0 /* DelegateGetVotersOperation.swift in Sources */,
+				8481E42D1F3DBC1400CAB4C0 /* TransactionSendOperation.swift in Sources */,
 				8451C98C1F12BD08004C8D16 /* LoaderAPI.swift in Sources */,
+				8481E3FF1F3DAFFF00CAB4C0 /* LoaderPingOperation.swift in Sources */,
+				845FA8C11F182B7600CDCEE0 /* AccountGetPublicKeyOperation.swift in Sources */,
 				8451C97E1F12BD08004C8D16 /* AccountAPI.swift in Sources */,
+				8481E3F81F3DA92C00CAB4C0 /* MultisignatureGetPendingTransactionsOperation.swift in Sources */,
+				8481E3F61F3DA88100CAB4C0 /* MultisignatureSignOperation.swift in Sources */,
+				8481E4021F3DB44E00CAB4C0 /* BlockGetAllOperation.swift in Sources */,
+				8481E4211F3DBA4000CAB4C0 /* TransactionGetAllMultisignaturesOperation.swift in Sources */,
+				845FA8BE1F182B7600CDCEE0 /* AccountGeneratePublicKeyOperation.swift in Sources */,
+				8481E4231F3DBA9000CAB4C0 /* TransactionGetTransactionOperation.swift in Sources */,
+				8481E40E1F3DB6BF00CAB4C0 /* BlockGetBlockchainHeightOperation.swift in Sources */,
 				8451C9861F12BD08004C8D16 /* BlockAPI.swift in Sources */,
+				8481E3FD1F3DAE3F00CAB4C0 /* LoaderGetSynchronisationStatusOperation.swift in Sources */,
+				8481E43E1F3DCA1700CAB4C0 /* DelegateToggleForgingOperation.swift in Sources */,
+				8481E4271F3DBB2200CAB4C0 /* TransactionGetQueuedOperation.swift in Sources */,
+				8488B1C61F3D0F7B00B8D073 /* PeerGetPeerVersion.swift in Sources */,
+				8481E4401F3DCB4C00CAB4C0 /* DelegateIsForgingOperation.swift in Sources */,
+				8481E4361F3DC8DD00CAB4C0 /* DelegateSearchOperation.swift in Sources */,
+				845FA8C21F182B7600CDCEE0 /* AccountOpenOperation.swift in Sources */,
+				8481E4301F3DC0FD00CAB4C0 /* DelegateBecomeDelegateOperation.swift in Sources */,
 				8451C98F1F12BD08004C8D16 /* PeerAPI.swift in Sources */,
 				8451C9941F12BD08004C8D16 /* TransactionAPI.swift in Sources */,
+				8481E4291F3DBB4800CAB4C0 /* TransactionGetMultisignatureOperation.swift in Sources */,
+				8481E42B1F3DBB7100CAB4C0 /* TransactionCountOperation.swift in Sources */,
+				845FA8C61F18301400CDCEE0 /* AccountGetDelegatesOperation.swift in Sources */,
+				8481E40C1F3DB69200CAB4C0 /* BlockGetSupplyOperation.swift in Sources */,
+				845FA8BF1F182B7600CDCEE0 /* AccountGetBalanceOperation.swift in Sources */,
+				8481E43A1F3DC97700CAB4C0 /* DelegateGetVotesOperation.swift in Sources */,
+				845FA8C01F182B7600CDCEE0 /* AccountGetOperation.swift in Sources */,
+				8481E3F41F3DA7EC00CAB4C0 /* MultisignatureGetAccountsOperation.swift in Sources */,
+				8481E4321F3DC80100CAB4C0 /* DelegateGetAllOperation.swift in Sources */,
+				8481E4081F3DB57000CAB4C0 /* BlockGetBlockchainFeesOperation.swift in Sources */,
+				8481E3F21F3DA66700CAB4C0 /* MultisignatureCreateOperation.swift in Sources */,
 				8451C98D1F12BD08004C8D16 /* MultisignatureAPI.swift in Sources */,
 				8451C98A1F12BD08004C8D16 /* DelegateAPI.swift in Sources */,
+				845FA8C41F182B8700CDCEE0 /* CallbackOperation.swift in Sources */,
 				8451C9841F12BD08004C8D16 /* Api.swift in Sources */,
 				8451C9851F12BD08004C8D16 /* AppsAPI.swift in Sources */,
 				8451C9901F12BD08004C8D16 /* SignatureAPI.swift in Sources */,
+				8481E41B1F3DB93A00CAB4C0 /* TransactionGetAllOperation.swift in Sources */,
+				8488B1C41F3D0EF500B8D073 /* PeerGetPeerOperation.swift in Sources */,
+				8481E4421F3DCC4400CAB4C0 /* DelegateGetForgedByAccountOperation.swift in Sources */,
+				8481E4381F3DC93400CAB4C0 /* DelegateGetCountOperation.swift in Sources */,
+				8481E4181F3DB88800CAB4C0 /* BlockGetEpochOperation.swift in Sources */,
+				8481E4251F3DBB0200CAB4C0 /* TransactionGetUnconfirmedOperation.swift in Sources */,
+				8488B1C81F3D103800B8D073 /* PeerGetPeersCount.swift in Sources */,
+				8481E40A1F3DB65300CAB4C0 /* BlockGetBlockRewardOperation.swift in Sources */,
+				8481E41F1F3DBA1300CAB4C0 /* TransactionGetAllQueuedOperation.swift in Sources */,
+				842494FD1F1BBFF90083A072 /* SignatureAddSecondSignatureOperation.swift in Sources */,
+				8481E4161F3DB85A00CAB4C0 /* BlockGetMilestoneOperation.swift in Sources */,
+				8481E4101F3DB73000CAB4C0 /* BlockGetStatusOperation.swift in Sources */,
+				8481E4121F3DB7F800CAB4C0 /* BlockGetBroadhashOperation.swift in Sources */,
+				8481E4061F3DB52800CAB4C0 /* BlockGetBlockchainFeeOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
